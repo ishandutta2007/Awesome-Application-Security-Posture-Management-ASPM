@@ -34,73 +34,29 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The dedicated Application Security Posture Management (ASPM) market is estimated at **$1.8B to $2.55B** in 2025–2026, growing rapidly at an annual rate exceeding 20% to 25% as organizations combat alert fatigue, scanner sprawl, and software supply chain compliance requirements. The sector remains **moderately fragmented**: while cloud security titans (e.g., CrowdStrike, Snyk, Invicti) are aggressively acquiring or bundling posture engines, specialized pure-play innovators (e.g., Apiiro, OX Security, ArmorCode) maintain strong defensibility through proprietary code-to-runtime graph correlation and agentic AI remediation rather than consolidating into a single winner-take-all outcome.
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[CrowdStrike Falcon ASPM](https://www.crowdstrike.com/en-us/platform/cloud-security/aspm/)**
-
-  **Application security posture management integrated with Falcon Cloud Security** (built on the Bionic acquisition). Delivers a **real-time map of cloud applications**—microservices, APIs, data flows, dependencies—without outdated diagrams. Uniquely analyzes **application code in runtime** to surface exploitable vulnerabilities, not just vulnerable packages. Detects **shadow AI**, monitors external AI services, and identifies breach paths combining application weaknesses with AI misconfigurations. ASPM findings are **embedded directly into runtime detections**, giving SOC teams application context for faster triage. Named a **Customers' Choice in 2026 Gartner Peer Insights for ASPM Tools** . **Pricing**: Quote-only; enterprise contracts. **Free tier**: None. **Best for**: CrowdStrike customers wanting ASPM tightly integrated with runtime protection and cross-domain threat correlation—**trade-off**: entry cost and ecosystem lock-in.
-
-
-
-- **[Apiiro](https://apiiro.com/)**
-
-  **Agentic Application Security Platform** named a **Leader in IDC MarketScape for ASPM 2025**. Core differentiator: **Deep Code Analysis (DCA)** engine that builds an extended SBOM (XBOM) and enables **true runtime API endpoint matching**—mapping runtime traffic to the **exact API controller in code**, including file, line, and code owner. This is materially more precise than competitors that match only to host, service, or repository . The **AutoFix Agent** automates remediation. Fortune 500 customers include USAA, TIAA, BlackRock, Bloomberg, SoFi, and Shell. **Pricing**: Quote-only. **Free tier**: None. **Best for**: enterprises needing the most precise code-to-runtime correlation and automated remediation—**trade-off**: enterprise pricing and implementation commitment.
-
-
-
-- **[OX Security](https://www.ox.security/)**
-
-  **Active ASPM platform** named a **Leader in IDC MarketScape for ASPM 2025** . Key technologies: **Code Projection** traces runtime behavior back to source code to prove reachability and exploitability; **PBOM (Pipeline Bill of Materials)** extends SBOM coverage to build pipelines; **AppSec Data Fabric** normalizes results from 10 native scanners and **120+ third-party tools** into a single evidence-backed finding. Claims **92% reduction in false positives**. **Pricing**: Quote-only. **Free tier**: None. **Best for**: enterprises wanting evidence-based prioritization with full supply chain (code + pipeline) visibility—**trade-off**: complexity and enterprise-only positioning.
-
-
-
-- **[ArmorCode](https://www.armorcode.com/)**
-
-  **AI-powered ASPM platform** with **Anya, agentic AI virtual security champion**. Built on **40B+ findings** and **320+ integrations** . **Anya** provides conversational security queries, AI-driven remediation with code-specific guidance, and automated actions via **MCP server** (Jira ticket creation, incident response, pipeline triggers). Claims **80% reduction in MTTR** with AI remediation . Strong **software supply chain security (SSCS)** with composite SBOMs and CRA compliance support. **Pricing**: Quote-only. **Free tier**: None. **Best for**: enterprises wanting the most mature agentic AI in ASPM with broad tool integration and compliance focus—**trade-off**: enterprise scale and pricing.
-
-
-
-- **[Mend.io](https://www.mend.io/)**
-
-  **Unified AppSec and AI security platform** with **full-stack visibility** across packages, AI models, agents, and system prompts (SBOM/AI-BOM). **Continuous AI behavioral testing** with 1,000+ concurrent red-team simulations per build. **Runtime in-application protection** blocks unsafe behavior in production (80% MTTR reduction). Strong **compliance evidence layer** for EU AI Act, Executive Order 14028, and Cyber Resilience Act . **Pricing**: Quote-only. **Free tier**: Limited for open source. **Best for**: organizations needing to secure both traditional code and embedded AI/LLM components with runtime defense—**trade-off**: broader scope than pure ASPM.
-
-
-
-- **[Legit Security](https://www.legitsecurity.com/)**
-
-  **AI-native ASPM platform** with AI across the **entire lifecycle**: discovery (code-to-cloud correlation, malicious model detection), prioritization (AI-assisted risk scoring with explainability), and remediation (AI-generated fix suggestions in PR checks). Explicit focus on **securing AI-generated code** and governing AI development. Users control when/where AI is applied based on policy . **Pricing**: Quote-only. **Free tier**: None. **Best for**: organizations adopting AI coding assistants that need ASPM tuned for AI-generated code risks—**trade-off**: newer vendor than CrowdStrike or Apiiro.
-
-
-
-- **[Snyk AppRisk](https://snyk.io/product/apprisk/)**
-
-  **ASPM offering within the Snyk platform**. **Essentials**: automated app asset discovery, tailored security controls, risk-based prioritization. **Pro**: adds **runtime insights** (whether an app is deployed/public-facing, whether vulnerable packages are actually used at runtime), integrations with **non-Snyk tools**, advanced policies, and analytics . **Pricing**: Quote-only; tiered by developers and features. **Free tier**: Limited for open source. **Best for**: Snyk customers wanting ASPM capabilities layered on their existing Snyk investment—**trade-off**: Pro tier required for full multi-tool ASPM.
-
-
-
-- **[Kondukto](https://kondukto.io/)**
-
-  **ASPM and orchestration platform** acquired by **Invicti Security** in August 2025 . Unified management of AppSec tools across SDLC, AI-powered remediation, and automation at scale. Combined with Invicti's runtime-validated DAST, delivers **proof-based prioritization**—only vulnerabilities confirmed exploitable by DAST are surfaced as critical. **Pricing**: Quote-only; now part of Invicti offerings. **Free tier**: None. **Best for**: existing Invicti DAST customers wanting ASPM orchestration with runtime-validated findings—**trade-off**: acquisition integration in progress.
-
-
-
-- **[Jit](https://www.jit.io/)**
-
-  **Open ASPM platform** with a **"shift left" philosophy**—prioritizing remediation before production, not after. Includes **built-in scanners** out of the box (SAST, SCA, secrets, IaC, DAST) plus ability to ingest third-party tools. **Developer-first**: change-based scanning in GitHub/GitLab/IDE, auto-remediation suggestions, developer security portals with scores per service. Security Plans align programs to outcomes (SOC2, reduce criticals by X%). Prioritization uses runtime and business context . **Pricing**: Quote-only; developer-based plans. **Free tier**: Limited. **Best for**: developer-led organizations wanting ASPM that prevents issues before production rather than managing backlogs—**trade-off**: less depth in enterprise governance than ArmorCode or OX.
-
-
+| Platform | Company Size (Valuation / Revenue) | Starting Tier Pricing | Free Tier / Trial Limits | Key Capabilities & Highlights |
+| :--- | :--- | :--- | :--- | :--- |
+| **[CrowdStrike Falcon ASPM](https://www.crowdstrike.com/en-us/platform/cloud-security/aspm/)** | **~$250B+ Market Cap** / ~$4.8B ARR | **£1,115/service/yr** (~$1,450/yr, 100 services MOQ on G-Cloud) or metered Falcon Flex platform contract | **15-day free trial** of Falcon Cloud Security (no credit card required) or 30-day sandbox Test Drive | Real-time cloud application mapping (microservices, APIs, data flows) via Bionic tech. Integrates runtime analysis directly into SOC detection workflows, monitoring shadow AI and reachability. |
+| **[Snyk AppRisk](https://snyk.io/product/apprisk/)** | **~$3.7B–$7.4B Valuation** / ~$309M ARR | **$25/contributing dev/month** (Team tier, 5–10 devs); AppRisk platform module requires Enterprise custom plan | **Free forever tier**: up to 5 projects, 100 SAST tests/mo, 200–400 SCA tests/mo, 300 IaC tests/mo, 100 container tests/mo; or 14-day Enterprise trial | Asset discovery and posture visibility layered on Snyk. AppRisk Essentials covers discovery & posture; AppRisk Pro introduces runtime insights, reachability, and third-party scanner orchestration. |
+| **[Kondukto](https://kondukto.io/)** *(Invicti)* | **~$625M Parent Valuation** (Invicti) / ~$40M–$64M ARR | **~$6,000–$7,000/yr** (Invicti entry tier for limited targets); enterprise ASPM custom quoted by asset count | **7-day free trial** of Invicti (up to 5 targets) or scheduled proof-of-concept for Kondukto ASPM platform | Orchestrates & normalizes findings across SDLC. Integrated with Invicti's runtime-validated DAST for proof-based vulnerability prioritization, eliminating false positives. |
+| **[Apiiro](https://apiiro.com/)** | **~$500M–$600M Valuation** / ~$135M Total Funding | **~$55,000/yr** median enterprise starting contract (priced per Agent Compute Unit / repo scope) | **14-day free trial** with full platform evaluation and application inventory build | Deep Code Analysis (DCA) mapping runtime traffic to exact API controllers down to file and line level. AutoFix Agent automates developer remediation across Fortune 500 codebases. |
+| **[OX Security](https://www.ox.security/)** | **~$250M–$500M Valuation** / ~$94M Total Funding ($10M+ ARR) | **~$350/month** entry-level baseline; ~$1,000/dev/yr ($100k/yr for 100 devs on AWS Marketplace) | **14-day free evaluation** via 'Start Free' trial registration or custom enterprise PoC | Active ASPM leveraging Code Projection and Pipeline Bill of Materials (PBOM). Unifies 10 native scanners and 120+ third-party tools into evidence-backed risk analysis. |
+| **[Mend.io](https://www.mend.io/)** | **~$250M–$500M Est. Valuation** / ~$121M Total Funding | **$1,000/contributing dev/year** (Mend AppSec); $300/dev/yr (AI Security); $250/dev/yr (Renovate Enterprise) | **Free forever plan** for Open Source maintainers via Mend Renovate Community / Mend Bolt (free scanner extension) | Full-stack posture visibility across code packages, AI models, and agents (SBOM/AI-BOM). Offers continuous red-teaming simulations and in-application runtime protection. |
+| **[ArmorCode](https://www.armorcode.com/)** | **~$200M–$277M Valuation** / ~$81M Total Funding | **~$4,500/year** (AWS Marketplace Bronze tier entry); mid-market & enterprise custom quoted | **14-day guided proof-of-concept (PoC)** / live sandbox environment upon demo verification | Powered by 40B+ findings and 320+ tool integrations. Features Anya, an agentic AI security champion with Model Context Protocol (MCP) server support for automated Jira and CI/CD actions. |
+| **[Legit Security](https://www.legitsecurity.com/)** | **~$100M–$250M Valuation** / ~$70M–$80M Total Funding | **~$15,000–$25,000/yr** estimated enterprise entry contract (AWS Marketplace SaaS Contract by contributor scope) | **14-day free trial** for secrets detection / AI code capabilities; free open-source GitHub/GitLab posture tool (Legitify) | AI-native ASPM spanning code-to-cloud discovery, automated risk scoring, and AI-generated PR fixes. Strong focus on governance of AI coding assistants and supply chain integrity. |
+| **[Jit](https://www.jit.io/)** *(Torq)* | **~$70M Acquisition Valuation** (Torq) / ~$46.7M Total Funding | **$50/contributing dev/month** (Growth tier); custom enterprise contracts via AWS Marketplace | **Free forever tier**: 1 developer seat on managed infrastructure with core SAST, SCA, secrets, and IaC PR scans | Developer-first 'shift left' ASPM integrating orchestration into pull requests. Built-in scanners and Company Context Graph align security plans to automated remediation. |
 
 ## Open-Source GitHub Projects
 
